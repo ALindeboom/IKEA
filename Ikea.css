@@ -1,0 +1,494 @@
+/* --------------------Basic-----------------------*/
+:root {
+  --Black: hsl(0, 0%, 0%);        /* #000000 */
+  --Lightgrey: hsl(0, 0%, 95%);   /* #f2f2f2 */
+  --Darkgrey: hsl(0, 0%, 80%);    /* #cccccc */
+  --Middlegrey: hsl(0, 0%, 87%);  /* #dfdfdf */
+  --Antraciet: hsl(0, 0%, 28%);   /* #484848 */
+  --Blue: hsl(208, 100%, 32%);    /* #0058a3 */
+  --font-R: 'Roboto';
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    font-family: var(--font-R);
+    background-color: white;
+    display: grid;
+}
+
+.header {
+    grid-area: header;
+    font-weight: 900;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+li a {
+    color: var(--Black);
+    text-align: center;
+    text-decoration: none;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 3px solid var(--Black);
+    text-align: left;
+    font-size: 16px;
+    background-color: var(--Lightgrey);
+    outline: none;
+}
+
+input:hover {
+    background-color: var(--Darkgrey);
+}
+
+form img { 
+    position: absolute;
+    width: 40px;
+    background-color: var(--Lightgrey);
+}
+
+.ikea {
+    grid-area: ikea;
+}
+
+.brönden {
+    grid-area: bronden;
+}
+
+.foto1 {
+    grid-area: foto1;
+}
+
+.foto2 {
+    grid-area: foto2;
+}
+
+.kies {
+    grid-area: kies;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.kies img {
+    border-style: solid;
+    border-color: var(--Darkgrey);
+    border-width: 1px;
+    border-radius: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.kies img:hover {
+    border-color: var(--Black);
+    border-width: 2px;
+    cursor: pointer;
+}
+
+.kies button {
+    font-size: 16px;
+    background-color: white;
+    border-color: var(--Lightgrey);
+    border-radius: 5px;
+}
+
+.kies button:hover {
+    border-color: var(--Black);
+    cursor: pointer;
+}
+
+.levering {
+    grid-area: levering;
+}
+
+.levering-container {
+    border: 1px solid var(--Middlegrey);
+    border-radius: 8px;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.levering h2 {
+    padding-bottom: 15px;
+}
+
+.levering h3 {
+    font-size: 15px;
+    font-weight: 900;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.optie1 {
+    padding-bottom: 10px;
+}
+
+.optie2 {
+    padding-bottom: 10px;
+}
+
+.optie3 {
+    padding-bottom: 10px;
+}
+
+.levering img {
+    float: left;
+    padding-right: 10px;
+}
+
+.levering button {
+    color: white;
+    background-color: var(--Blue);
+}
+
+.levering button:hover {
+    cursor: pointer;
+}
+
+.tekst {
+    grid-area: tekst;
+    line-height: 1.5;
+}
+
+.product {
+    grid-area: product;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--Middlegrey);
+    border-bottom: 1px solid var(--Middlegrey);
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.product a {
+    color: var(--Black);
+    text-align: center;
+    text-decoration: none;
+}
+
+.arrow-logo {
+    position: absolute;
+    width: 36px;
+}
+
+.arrow-logo:hover {
+    cursor: pointer;
+}
+
+/* --------------------Mobile-----------------------*/
+@media only screen and (max-width: 1470px) { 
+
+    .container {
+        width: 470px;
+        grid-template-rows: auto auto 200px;
+        grid-template-areas: 
+            "header"
+            "ikea"
+            "bronden"
+            "foto2"
+            "foto1"
+            "tekst"
+            "kies"
+            "product"
+            "levering";
+    }
+
+    .header {
+        width: 470px;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+        font-size: 18px;  
+    }
+
+    ul {
+        width: 470px;
+        padding-top: 12px;
+    }
+
+    input {
+        margin-top: 17px;
+        padding: 12px 255px 12px 12px; 
+    }
+    
+    form img { 
+        top: 54px;
+        left: 435px;
+    }
+
+    .ikea {
+        width: 470px;
+        height: 160px;
+        background-image: url('./images/logo.png'); 
+        background-size: 100% 114%; 
+        background-repeat: no-repeat;
+    }
+
+    .brönden {
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    .brönden p {
+        width: 475px;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 18px;
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+
+    .foto2 {
+        width: 475px;
+        height: 230px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        background-image: url('./images/bronden-vloerkleed-1.jpg');
+        background-size: 100% 117% ;
+        background-repeat: no-repeat;
+    }
+
+    .foto1 {
+        width: 475px;
+        height: 230px;
+        background-image: url('./images/bronden-vloerkleed-2.jpg');
+        background-size: 111% 205% ;
+        background-repeat: no-repeat;
+    }
+
+    .tekst {
+        width: 475px;
+        padding: 18px 20px 8px 10px;
+        font-size: 18px;
+    }
+
+    .kies {
+        height: 400px;
+    }
+
+    .kies h2 {
+        width: 455px;
+        border-top: 1px solid var(--Middlegrey);
+        font-size: 18px;
+        font-weight: 900;
+        padding-top: 22px;
+        padding-bottom: 24px;
+    }
+
+    .afmeting {
+        padding-top: 3px;
+        margin-top: 22px;
+    }
+
+    .kies button {
+        padding: 3px;
+        margin-top: -28px;
+    }
+
+    .product {
+        width: 475px;
+        font-size: 30px;
+        margin-top: -63px;
+    }
+    
+    .arrow-logo {
+        left: 434px;
+    }
+
+    .levering-container {
+        width: 462px;
+        margin-top: 5px;
+    }
+
+    .levering h2 {
+        padding-top: 45px;
+        padding-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .levering img {
+        width: 9%;
+        padding-left: 5px;
+    }
+
+    .levering button {
+        width: 475px;
+        font-size: 18px;
+        margin-top: 12px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 8px;
+    }
+}
+
+/* --------------------Desktop-----------------------*/
+@media only screen and (min-width: 1470px) {
+
+    body {
+        height: 100vh;
+    }
+
+    .container {
+        width: 1440px;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 360px 360px 360px 360px;
+        grid-template-areas: 
+            "header header header header"
+            "ikea bronden foto1 foto1"
+            "foto2 foto2 foto1 foto1"
+            "foto2 foto2 kies levering"
+            "tekst tekst product product";
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        font-size: 20px;  
+    }
+
+    ul {
+        width: 420px;
+    }
+      
+    li {
+        float: left;
+        padding-top: 10px;
+    }
+      
+    form {
+        position: relative;
+        padding-right: 10px;
+    }
+
+    input {
+        margin: 10px;
+        padding: 16px 50px 14px 8px; 
+    }
+    
+    form img { 
+        top: 16px;
+        left: 243px;
+    }
+
+    .ikea {
+        width: 360px;
+        height: 250px;
+    }
+
+    .ikea {
+        width: 360px;
+        height: 260px;
+        background-image: url('./images/logo.png'); 
+        background-size: 100% 100%; 
+        background-repeat: no-repeat;
+    }
+
+    .brönden {
+        width: 360px;
+        padding-top: 20px;
+        padding-left: 15px;
+    }
+
+    .brönden p {
+        width: 360px;
+        font-size: 14px;
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+
+    .foto1 {
+        width: 720px;
+        height: 560px;
+        background-image: url('./images/bronden-vloerkleed-2.jpg');
+        background-size: 111% 175% ;
+        background-repeat: no-repeat;
+    }
+
+    .foto2 {
+        width: 720px;
+        height: 600px;
+        background-image: url('./images/bronden-vloerkleed-1.jpg');
+        background-size: 100% 113% ;
+        background-repeat: no-repeat;
+    }
+
+    .kies {
+        height: 300px;
+    }
+
+    .kies h2 {
+        font-size: 16px;
+        font-weight: 900;
+        padding-bottom: 15px;
+    }
+
+    .afmeting {
+        width: 330px;
+        padding-top: 20px;
+        border-top: 1px solid var(--Middlegrey);
+        margin-top: 30px;
+    }
+
+    .kies button {
+        padding: 5px 3px 5px 3px;
+    }
+
+    .levering h2 {
+        font-size: 16px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .levering img {
+        width: 10%;
+        padding-right: 10px;
+    }
+
+    .levering button {
+        font-size: 20px;
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .tekst {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .product {
+        width: 720px;
+        margin-top: 15px;
+        padding-left: 26px;
+        font-size: 30px;
+    }
+
+    .arrow-logo {
+        left: 665px;
+    }
+}
